@@ -12,7 +12,7 @@ This is a starter HTML/CSS template for a job seeker portfolio. It's designed fo
 - Contact Info
 
 ## Live Preview
-https://heather-kinney.github.io/Portfolio_RBR2
+[https://heather-kinney.github.io/Portfolio_RBR2](https://heather-kinney.github.io/Jobseeker_RBR2/)
 
 ## Customization
 
