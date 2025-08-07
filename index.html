@@ -16,18 +16,23 @@
 
 <section id="about" class="card carousel-section">
     <div class="carousel-container">
-        <div class="carousel">
-            <img src="Assets/Images/about1.jpg" alt="Marine fieldwork" class="carousel-img">
-            <img src="Assets/Images/about2.jpg" alt="Offshore wind project" class="carousel-img">
-            <img src="Assets/Images/about3.jpg" alt="Environmental monitoring" class="carousel-img">
+        <div class="carousel" id="carousel">
+            <img src="assets/images/about1.jpg" alt="Marine fieldwork" class="carousel-img">
+            <img src="assets/images/about2.jpg" alt="Offshore wind project" class="carousel-img">
+            <img src="assets/images/about3.jpg" alt="Environmental monitoring" class="carousel-img">
         </div>
         <div class="carousel-banner">
             <h2>About Me</h2>
             <p>I’m an experienced environmental affairs manager with a strong foundation in marine science, offshore wind permitting, and ecological monitoring.</p>
         </div>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="moveToSlide(0)"></span>
+            <span class="dot" onclick="moveToSlide(1)"></span>
+            <span class="dot" onclick="moveToSlide(2)"></span>
+        </div>
     </div>
 </section>
-
+        
         <section id="resume" class="card">
             <h2>Résumé Highlights</h2>
             <ul>
@@ -58,5 +63,22 @@
             <p>&copy; 2025 Ryan Rezendes</p>
         </footer>
     </div>
+    <script>
+    const carousel = document.getElementById('carousel');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+
+    function moveToSlide(slideIndex) {
+        carousel.style.transform = `translateX(-${slideIndex * 100}%)`;
+        currentSlide = slideIndex;
+        updateDots();
+    }
+
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+</script>
 </body>
 </html>
